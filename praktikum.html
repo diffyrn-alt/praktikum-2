@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Black Goose Bistro | Pizza-on-Demand</title>
+  <style>
+    body { font-family: Verdana, Arial, sans-serif; font-size: 14px; background: #fff; margin: 20px; }
+    .wrap { max-width: 520px; border: 2px solid #3b6e9a; padding: 16px; }
+    h1 { font-size: 16px; margin-top: 0; }
+    fieldset { border: none; padding: 0; margin: 0 0 14px; }
+    legend { font-weight: bold; padding: 0; margin-bottom: 4px; }
+    label.field { display: block; margin-bottom: 4px; }
+    label.field input { margin-left: 6px; }
+    textarea { width: 100%; height: 70px; }
+    .opt { display: block; }
+    h2 { font-size: 14px; margin: 0 0 4px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Pizza's Time | Pizza-on-Demand</h1>
+    <p>Our 12" wood-fired pizzas are available for delivery. Build your custom pizza and we'll deliver it within an hour.</p>
+
+    <form action="http://pizzastime.com/pizza.php" method="post">
+
+      <fieldset>
+        <legend>Your Information</legend>
+        <label class="field">Name: <input type="text" name="customername"></label>
+        <label class="field">Address: <input type="text" name="address"></label>
+        <label class="field">Telephone Number: <input type="tel" name="telephone"></label>
+        <label class="field">Email: <input type="email" name="email"></label>
+        <label class="field" for="instructions">Delivery instructions:</label>
+        <textarea id="instructions" name="instructions" maxlength="400"
+                  placeholder="No more than 400 characters long"></textarea>
+      </fieldset>
+
+      <h2>Design Your Dream Pizza:</h2>
+      <p style="margin-top:0">Pizza specs</p>
+
+      <fieldset>
+        <legend style="font-weight:normal">Crust (Choose one):</legend>
+        <label class="opt"><input type="radio" name="crust" value="classic white"> Classic white</label>
+        <label class="opt"><input type="radio" name="crust" value="multigrain"> Multigrain</label>
+        <label class="opt"><input type="radio" name="crust" value="cheese-stuffed"> Cheese-stuffed crust</label>
+        <label class="opt"><input type="radio" name="crust" value="gluten-free"> Gluten-free</label>
+      </fieldset>
+
+      <fieldset>
+        <legend style="font-weight:normal">Toppings (Choose as many as you want):</legend>
+        <label class="opt"><input type="checkbox" name="toppings[]" value="red sauce" checked> Red sauce</label>
+        <label class="opt"><input type="checkbox" name="toppings[]" value="white sauce"> White sauce</label>
+        <label class="opt"><input type="checkbox" name="toppings[]" value="mozzarella"> Mozzarella Cheese</label>
+        <label class="opt"><input type="checkbox" name="toppings[]" value="pepperoni"> Pepperoni</label>
+        <label class="opt"><input type="checkbox" name="toppings[]" value="mushrooms"> Mushrooms</label>
+        <label class="opt"><input type="checkbox" name="toppings[]" value="peppers"> Peppers</label>
+        <label class="opt"><input type="checkbox" name="toppings[]" value="anchovies"> Anchovies</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Number</legend>
+        <label for="number">How many pizzas:</label>
+        <select id="number" name="number">
+          <option>1</option><option>2</option><option>3</option>
+          <option>4</option><option>5</option><option>6</option>
+        </select>
+      </fieldset>
+
+      <input type="submit" value="Bring me a pizza!">
+      <input type="reset" value="Reset">
+    </form>
+  </div>
+</body>
+</html>

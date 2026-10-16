@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Pemesanan Barang</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 24px; background: #f3f3f3; color: #222;
+           font-family: "Comic Sans MS", "Segoe Print", Arial, sans-serif; font-size: 13px; }
+    nav { display: flex; max-width: 760px; margin: 0 auto 24px; padding: 4px 12px;
+          background: #fff; border: 2px solid #222; }
+    nav a { flex: 1; text-align: center; color: #222; text-decoration: none; border-right: 1px solid #222; }
+    nav a:last-child { border-right: none; }
+    .product { display: flex; gap: 24px; max-width: 760px; margin: 0 auto; }
+    .photo-col { flex: 0 0 140px; }
+    .photo { width: 140px; height: 140px; border: 2px solid #222; margin-bottom: 8px;
+      background:
+        linear-gradient(to top right, transparent calc(50% - 1px), #222 50%, transparent calc(50% + 1px)),
+        linear-gradient(to bottom right, transparent calc(50% - 1px), #222 50%, transparent calc(50% + 1px)), #fff; }
+    form { flex: 1; }
+    .row { display: flex; align-items: flex-start; margin-bottom: 10px; }
+    .label { flex: 0 0 170px; text-align: right; padding: 3px 12px 0 0; }
+    .input { width: 280px; padding: 3px 6px; font: inherit; background: #fff; border: 2px solid #222; }
+    textarea.input { height: 90px; resize: vertical; }
+    .select { width: 280px; }
+    .small { width: 60px; }
+    .note { font-size: 11px; margin: 4px 0; }
+    .checks label { display: block; color: #2e7d32; margin-bottom: 3px; }
+    button, input[type="file"]::file-selector-button {
+      font: inherit; font-size: 12px; padding: 3px 10px; border: 2px solid #222; background: #fff; cursor: pointer; }
+    .upload input[type="file"] { width: 140px; font-size: 11px; }
+    button.green { color: #fff; background: #1faa2f; border-color: #0c5a15; }
+    @media (max-width: 700px) {
+      .product, .row { flex-direction: column; }
+      .label { text-align: left; flex: none; padding: 0 0 3px; }
+      .input, .select { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Generate Link</a>
+    <a href="#">Transaction History</a>
+    <a href="#">Policy</a>
+    <a href="#">Logout</a>
+  </nav>
+
+  <div class="product">
+    <div class="photo-col">
+      <div class="photo" role="img" aria-label="Product photo placeholder"></div>
+      <div class="upload">
+        <label for="picture" class="note">Upload Picture</label>
+        <input type="file" id="picture" name="picture" accept="image/*" form="orderForm">
+      </div>
+    </div>
+
+    <form id="orderForm" action="prak2_kelompok_1_desainuiux_pemweb_hasil.html" method="get">
+      <div class="row">
+        <label class="label" for="title">Title Here :</label>
+        <input type="text" id="title" name="title" class="input" value="MacBook Air £800">
+      </div>
+
+      <div class="row">
+        <label class="label" for="description">Description :</label>
+        <textarea id="description" name="description" class="input">Year : 2009
+Model :
+Condition : Mint</textarea>
+      </div>
+
+      <div class="row">
+        <label class="label" for="account">Account Number :</label>
+        <input type="text" id="account" name="account" class="input" value="123-456-789-0">
+      </div>
+
+      <div class="row">
+        <label class="label" for="bank">Bank :</label>
+        <select id="bank" name="bank" class="input select">
+          <option>HSBC</option>
+          <option>BCA</option>
+          <option>Mandiri</option>
+          <option>BNI</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label class="label" for="holder">Account Holder :</label>
+        <input type="text" id="holder" name="holder" class="input" placeholder="Name Here">
+      </div>
+
+      <div class="row">
+        <label class="label" for="transaction">Transaction :</label>
+        <div>
+          <select id="transaction" name="transaction" class="input small">
+            <option>1</option><option>2</option><option>3</option>
+          </select>
+          <p class="note">* if the transaction is for 3 person, choose 3 from the drop-down list</p>
+        </div>
+      </div>
+
+      <div class="row checks">
+        <span class="label"></span>
+        <div>
+          <label><input type="checkbox" name="sms" checked> Send to Mobile Phone</label>
+          <label><input type="checkbox" name="mail" checked> Send to Email</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <label class="label" for="mobile">Send to Mobile Phone :</label>
+        <input type="text" id="mobile" name="mobile" class="input" value="1234567890, 1234567891">
+      </div>
+
+      <div class="row">
+        <label class="label" for="email">Send to Email :</label>
+        <input type="text" id="email" name="email" class="input" value="mfmm2g13@soton.ac.uk, fys_06@yahoo.com">
+      </div>
+</body>
+</html>
